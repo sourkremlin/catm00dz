@@ -255,7 +255,19 @@ class ImageCalendar:
         stride = self._BOX_HEIGHT * (date.day - 1)
         return self._CALENDAR_START.y + stride
 
+    def center_pixel_from_date(self, date) -> Pixel:
+        return Pixel(
+            self.center_pixel_x_from_date(date),
+            self.center_pixel_y_from_date(date)
+        )
+
     def draw_point(self, pixel:Pixel, color:Color, radius:float):
+        img_writer = ImageDraw.Draw(self._img)
+        img_writer.point(
+            [pixel.x, pixel.y], (255,255,255)
+        )
+        print('Writing to {0}'.format(pixel))
+        return
         img_writer = ImageDraw.Draw(self._img)
 
         top_left = Pixel(
