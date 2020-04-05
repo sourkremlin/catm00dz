@@ -11,7 +11,7 @@ setuptools.setup(
     description='For the self-aware cat person',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/sourkremlin/catm00dz',
+    url='https://github.com/sourkwhat/catm00dz',
     packages=setuptools.find_packages(),
     install_requires=['pillow'],
     test_requires=['pytest'],
